@@ -1,0 +1,147 @@
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body, canvas {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#matrix-canvas {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#header-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    animation: fadeInDown 2s 1s forwards;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#text-button-container {
+    margin-left: 40px; /* Double the margin */
+    margin-top: 40px;  /* Double the margin */
+}
+
+#logo {
+    width: 500px; /* Double the size */
+    height: auto;
+    opacity: 0;
+    animation: fadeInDown 2s 2s forwards;
+}
+
+#headline {
+    font-size: 72px; /* Double the size */
+    font-weight: 700;
+    margin-bottom: 10px; /* Double the margin */
+    color: #fff;
+    opacity: 0;
+    animation: fadeInDown 2s 3s forwards;
+}
+
+#big-text {
+    font-size: 48px; /* Double the size */
+    margin-bottom: 20px; /* Double the margin */
+    color: #fff;
+    opacity: 0;
+    animation: fadeInDown 2s 3s forwards;
+}
+
+#github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 36px; /* Adjust the padding */
+    font-size: 28px; 
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    opacity: 0;
+    animation: fadeInDown 2s 4s forwards;
+    margin-right: 20px; 
+}
+
+#github-button i {
+    margin-right: 10px; /* Add margin to the GitHub icon */
+}
+
+
+#github-button:hover {
+    background-color: #555;
+}
+
+#discord-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 36px; /* Match the padding of the GitHub button */
+    font-size: 28px; /* Match the font size of the GitHub button */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5865F2; /* Discord brand color */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    opacity: 0;
+    animation: fadeInDown 2s 4s forwards; /* Slight delay for the animation */
+}
+
+#discord-button i {
+    margin-right: 10px;
+}
+
+#discord-button:hover {
+    background-color: #4e5bd4; /* Slightly darker on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+    #logo {
+        width: 150px;
+    }
+    #headline {
+        font-size: 36px;
+    }
+    #big-text {
+        font-size: 24px;
+    }
+    #github-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    #text-button-container {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    #github-button i {
+        margin-right: 5px;
+    }
+    #github-button, #discord-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
