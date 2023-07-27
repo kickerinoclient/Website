@@ -1,1 +1,40 @@
-var _0x5f1f02=_0x336c;function _0x336c(_0x3550a5,_0x3f9e98){var _0x29af38=_0x29af();return _0x336c=function(_0x336c65,_0x4bb985){_0x336c65=_0x336c65-0x1dc;var _0x4315a6=_0x29af38[_0x336c65];return _0x4315a6;},_0x336c(_0x3550a5,_0x3f9e98);}function _0x29af(){var _0x1e1af4=['21PWTYSW','fillStyle','innerHeight','2698968wnWvkx','308745FWAmXt','DOMContentLoaded','525136wpCMMK','getElementById','rgba(0,\x200,\x200,\x200.05)','192702DzhRpt','getContext','#4d4d4d','length','split','width','floor','addEventListener','height','font','1034529fpEnti','1667652VcIseE','fillRect','592760xVOaeo'];_0x29af=function(){return _0x1e1af4;};return _0x29af();}(function(_0x4b6346,_0x356c89){var _0x49ef90=_0x336c,_0x3f27d3=_0x4b6346();while(!![]){try{var _0x5490c1=parseInt(_0x49ef90(0x1ef))/0x1+-parseInt(_0x49ef90(0x1ec))/0x2+-parseInt(_0x49ef90(0x1e2))/0x3+-parseInt(_0x49ef90(0x1e5))/0x4+parseInt(_0x49ef90(0x1ea))/0x5+-parseInt(_0x49ef90(0x1e3))/0x6+parseInt(_0x49ef90(0x1e6))/0x7*(parseInt(_0x49ef90(0x1e9))/0x8);if(_0x5490c1===_0x356c89)break;else _0x3f27d3['push'](_0x3f27d3['shift']());}catch(_0xfb586d){_0x3f27d3['push'](_0x3f27d3['shift']());}}}(_0x29af,0x38e3d),document[_0x5f1f02(0x1df)](_0x5f1f02(0x1eb),function(){var _0x5e0de7=_0x5f1f02,_0x5d932d=document[_0x5e0de7(0x1ed)]('matrix-canvas'),_0x3c95c8=_0x5d932d[_0x5e0de7(0x1f0)]('2d');_0x5d932d[_0x5e0de7(0x1dd)]=window['innerWidth'],_0x5d932d[_0x5e0de7(0x1e0)]=window[_0x5e0de7(0x1e8)];var _0x564527='KICKERINO';_0x564527=_0x564527[_0x5e0de7(0x1dc)]('');var _0x1a01d4=0xa,_0x209c53=_0x5d932d[_0x5e0de7(0x1dd)]/_0x1a01d4,_0x37e075=[];for(var _0x556229=0x0;_0x556229<_0x209c53;_0x556229++){_0x37e075[_0x556229]=0x1;}function _0x45c3ca(){var _0x38ab6b=_0x5e0de7;_0x3c95c8[_0x38ab6b(0x1e7)]=_0x38ab6b(0x1ee),_0x3c95c8[_0x38ab6b(0x1e4)](0x0,0x0,_0x5d932d[_0x38ab6b(0x1dd)],_0x5d932d[_0x38ab6b(0x1e0)]),_0x3c95c8[_0x38ab6b(0x1e7)]=_0x38ab6b(0x1f1),_0x3c95c8[_0x38ab6b(0x1e1)]=_0x1a01d4+'px\x20monospace';for(var _0x4f8212=0x0;_0x4f8212<_0x37e075['length'];_0x4f8212++){var _0x229d39=_0x564527[Math[_0x38ab6b(0x1de)](Math['random']()*_0x564527[_0x38ab6b(0x1f2)])];_0x3c95c8['fillText'](_0x229d39,_0x4f8212*_0x1a01d4,_0x37e075[_0x4f8212]*_0x1a01d4),_0x37e075[_0x4f8212]*_0x1a01d4>_0x5d932d['height']&&Math['random']()>0.975&&(_0x37e075[_0x4f8212]=0x0),_0x37e075[_0x4f8212]++;}}setInterval(_0x45c3ca,0x21);}));
+document.addEventListener("DOMContentLoaded", function () {
+    var canvas = document.getElementById("matrix-canvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    var characters = "KICKERINO";
+    characters = characters.split("");
+
+    var fontSize = 10;
+    var columns = canvas.width / fontSize;
+    var drops = [];
+
+    for (var x = 0; x < columns; x++) {
+        drops[x] = 1;
+    }
+
+    function draw() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#4d4d4d";
+        ctx.font = fontSize + "px monospace";
+
+        for (var i = 0; i < drops.length; i++) {
+            var text = characters[Math.floor(Math.random() * characters.length)];
+
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            drops[i]++;
+        }
+    }
+
+    setInterval(draw, 33);
+});

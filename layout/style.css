@@ -1,1 +1,147 @@
-@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}#matrix-canvas{background-color:black;}#header-container,#matrix-canvas{position:absolute;}#github-button:hover{background-color:#555;}#matrix-canvas,body{width:100%;}#matrix-canvas{height:100%;}body,canvas{margin-left:0;}body,#header-container,#logo-container,canvas{display:flex;}#header-container{flex-direction:column;}body,canvas{margin-bottom:0;}#header-container{align-items:flex-start;}body,canvas{margin-right:0;}body,canvas{margin-top:0;}#big-text,#logo,#header-container,#discord-button,#headline,#github-button{opacity:0;}#header-container{animation:fadeInDown 2s 1s forwards;}body{overflow:hidden;}body,#github-button,#logo-container,#discord-button{align-items:center;}#text-button-container{margin-left:.416666667in;}#text-button-container{margin-top:2.5pc;}#discord-button:hover{background-color:#4e5bd4;}#logo{width:375pt;}body{height:100vh;}#logo{height:auto;}#logo{animation:fadeInDown 2s 2s forwards;}#headline{font-size:4.5pc;}#headline{font-weight:700;}#headline{margin-bottom:.104166667in;}#headline,#big-text,#github-button,#discord-button{color:#fff;}#big-text,#headline{animation:fadeInDown 2s 3s forwards;}#big-text{font-size:3pc;}#big-text{margin-bottom:.208333333in;}canvas,body{font-family:"Roboto",sans-serif;}#github-button i,#discord-button i{margin-right:.104166667in;}body,canvas{justify-content:center;}#discord-button,#github-button{display:inline-flex;}#discord-button,#github-button{padding-left:2.25pc;}#discord-button,#github-button{padding-bottom:.1875in;}#github-button,#discord-button{padding-right:2.25pc;}#github-button,#discord-button{padding-top:.1875in;}#github-button,#discord-button{font-size:28px;}#discord-button,#github-button{text-align:center;}#github-button,#discord-button{text-decoration:none;}#github-button{background-color:#333;}#discord-button,#github-button{border-radius:.3125pc;}#discord-button,#github-button{transition:background-color .3s;}#discord-button,#github-button{animation:fadeInDown 2s 4s forwards;}#github-button{margin-right:20px;}canvas{overflow:hidden;}canvas{width:100%;}#discord-button{background-color:#5865f2;}canvas{height:100vh;}canvas{align-items:center;}@media screen and (max-width: 768px){#logo{width:9.375pc;}#headline{font-size:2.25pc;}#big-text{font-size:.25in;}#github-button,#github-button,#discord-button{padding-left:.208333333in;}#discord-button,#github-button,#github-button{padding-bottom:7.5pt;}#github-button,#discord-button,#github-button{padding-right:.208333333in;}#github-button,#discord-button,#github-button{padding-top:7.5pt;}#github-button,#github-button,#discord-button{font-size:1pc;}#text-button-container{margin-left:1.25pc;}#text-button-container{margin-top:20px;}#github-button i{margin-right:3.75pt;}}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body, canvas {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#matrix-canvas {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#header-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    animation: fadeInDown 2s 1s forwards;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#text-button-container {
+    margin-left: 40px; 
+    margin-top: 40px;  
+}
+
+#logo {
+    width: 500px; 
+    height: auto;
+    opacity: 0;
+    animation: fadeInDown 2s 2s forwards;
+}
+
+#headline {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 10px; 
+    color: #fff;
+    opacity: 0;
+    animation: fadeInDown 2s 3s forwards;
+}
+
+#big-text {
+    font-size: 48px; 
+    margin-bottom: 20px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInDown 2s 3s forwards;
+}
+
+#github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 36px; 
+    font-size: 28px; 
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    opacity: 0;
+    animation: fadeInDown 2s 4s forwards;
+    margin-right: 20px; 
+}
+
+#github-button i {
+    margin-right: 10px; 
+}
+
+
+#github-button:hover {
+    background-color: #555;
+}
+
+#discord-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 36px; 
+    font-size: 28px; 
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5865F2; 
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    opacity: 0;
+    animation: fadeInDown 2s 4s forwards; 
+}
+
+#discord-button i {
+    margin-right: 10px;
+}
+
+#discord-button:hover {
+    background-color: #4e5bd4; 
+}
+
+
+@media screen and (max-width: 768px) {
+    #logo {
+        width: 150px;
+    }
+    #headline {
+        font-size: 36px;
+    }
+    #big-text {
+        font-size: 24px;
+    }
+    #github-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    #text-button-container {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    #github-button i {
+        margin-right: 5px;
+    }
+    #github-button, #discord-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
